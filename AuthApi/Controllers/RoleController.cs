@@ -9,24 +9,14 @@ using WebCore.Controllers;
 using WebCore.Models;
 
 namespace AuthApi.Controllers;
-
-[Route("api/[controller]/[action]")]
-[ApiController]
-public class RoleController : ApiControllerBase
+public class RoleController(IRoleService structureService) : ApiControllerBase
 {
-    private readonly IRoleService _structureService;
-
-    public RoleController(IRoleService structureService)
-    {
-        _structureService = structureService;
-    }
-
     [HttpPost, PermissionAuthorize(UserPermissions.StructureCreate)]
     public async Task<ResponseModel> CreateStructure(StructureForCreationDTO structureDto)
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.CreateStructureAsync(structureDto));
+                await structureService.CreateStructureAsync(structureDto));
     }
 
     [HttpGet("{name}"), PermissionAuthorize(UserPermissions.StructureView)]
@@ -34,7 +24,7 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                _structureService.RetrieveStructureByName(name));
+                structureService.RetrieveStructureByName(name));
     }
 
     [HttpPut, PermissionAuthorize(UserPermissions.StructureEdit)]
@@ -42,7 +32,7 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.ModifyStructureAsync(structure));
+                await structureService.ModifyStructureAsync(structure));
     }
 
     [HttpGet, PermissionAuthorize(UserPermissions.StructureView)]
@@ -50,7 +40,7 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.RetrieveStructureAsync());
+                await structureService.RetrieveStructureAsync());
     }
 
     [HttpPut, PermissionAuthorize(UserPermissions.PermissionNameEdit)]
@@ -58,7 +48,7 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.ModifyPermission(permissionName));
+                await structureService.ModifyPermission(permissionName));
     }
 
     [HttpGet, PermissionAuthorize(UserPermissions.PermissionView)]
@@ -66,14 +56,14 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.RetrievePermissionAsync().ToListAsync());
+                await structureService.RetrievePermissionAsync().ToListAsync());
     }
 
 
     [HttpGet, PermissionAuthorize(UserPermissions.PermissionView)]
     public IActionResult GetPermissionByName(string permissionName)
     {
-        return Ok(_structureService.RetrieveStructureByName(permissionName));
+        return Ok(structureService.RetrieveStructureByName(permissionName));
     }
 
 
@@ -83,13 +73,13 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.CreateStructurePermission(structurePermission));
+                await structureService.CreateStructurePermission(structurePermission));
     }
 
     [HttpGet, PermissionAuthorize(UserPermissions.PermissionView)]
     public IActionResult GetAllStructurePermission()
     {
-        return Ok(_structureService.RetriveStructurePermission().ToList());
+        return Ok(structureService.RetriveStructurePermission().ToList());
     }
 
     [HttpGet("/api/structures/{structureId:long}/permissions"), PermissionAuthorize(UserPermissions.PermissionView)]
@@ -97,7 +87,7 @@ public class RoleController : ApiControllerBase
     {
         return ResponseModel
             .ResultFromContent(
-                await _structureService.RetriveStructurePermissionByStructureId(structureId).ToListAsync());
+                await structureService.RetriveStructurePermissionByStructureId(structureId).ToListAsync());
     }
 
     [HttpDelete, PermissionAuthorize(UserPermissions.StructureEdit)]
@@ -105,7 +95,7 @@ public class RoleController : ApiControllerBase
         StructurePermissionForCreationDTO structurePermission)
     {
         return ResponseModel.ResultFromContent(
-            await _structureService
+            await structureService
                 .RemoveStructurePermissionAsync(structurePermission));
     }
 
@@ -113,7 +103,7 @@ public class RoleController : ApiControllerBase
     public async ValueTask<ResponseModel> AssignPermissionsToStructureById(
         [FromBody] AssignPermissionToStructureDto dto)
     {
-        await _structureService
+        await structureService
             .AssignPermissionsToStructureById(dto.StructureId, 
                 this.UserId, dto.PermissionIds);
         return ResponseModel.ResultFromContent(true);

@@ -9,7 +9,7 @@ public static class SerilogExtension
 {
     public static LoggerConfiguration Api(
         this LoggerSinkConfiguration loggerConfiguration,
-        IOptions<TelegramBotCredential> botCredential,
+        IOptions<TelegramBotCredential>? botCredential,
         LogEventLevel restrictedToMinimumLevel = LogEventLevel.Verbose)
     {
         if (loggerConfiguration == null)
@@ -24,7 +24,7 @@ public static class SerilogExtension
 public class ApiSink : ILogEventSink
 {
     private readonly TelegramBotCredential _botCredential;
-    public ApiSink(IOptions<TelegramBotCredential> botCredential)
+    public ApiSink(IOptions<TelegramBotCredential>? botCredential)
     {
         _botCredential = botCredential.Value;
     }
