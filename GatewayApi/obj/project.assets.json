@@ -3032,40 +3032,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\z_zayniddinov\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/ami/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWords\\GatewayApi\\GatewayApi.csproj",
+      "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/GatewayApi/GatewayApi.csproj",
       "projectName": "GatewayApi",
-      "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWords\\GatewayApi\\GatewayApi.csproj",
-      "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWords\\GatewayApi\\obj\\",
+      "projectPath": "/home/ami/RiderProjects/MyWordsBack/GatewayApi/GatewayApi.csproj",
+      "packagesPath": "/home/ami/.nuget/packages/",
+      "outputPath": "/home/ami/RiderProjects/MyWordsBack/GatewayApi/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ami/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWords\\WebCore\\WebCore.csproj": {
-              "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWords\\WebCore\\WebCore.csproj"
+            "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj": {
+              "projectPath": "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj"
             }
           }
         }
@@ -3104,7 +3096,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
