@@ -12,7 +12,7 @@ public enum UserPermissions
     StructureEdit = 1202,
     StructureDelete = 1203,
     
-    UserInfoView = 1300,
+    DefaultUserInfoView = 1300,
     UsersView = 1301,
     ChangeUserStructure = 1302,
 

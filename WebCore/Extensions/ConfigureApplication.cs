@@ -3,7 +3,9 @@ using System.Text.Json.Serialization;
 using AuthenticationBroker.Options;
 using DatabaseBroker.DataContext;
 using Entity.Enum;
+using Entity.Extensions;
 using Entity.Models;
+using Entity.Models.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +30,8 @@ public static class ConfigureApplication
     {
         builder.Services.Configure<TelegramBotCredential>(builder.Configuration
             .GetSection("TelegramBotCredential"));
+        
+        builder.WebHost.UseUrls(builder.Configuration.GetConnectionString("Host")!);
         
         Log.Logger = new LoggerConfiguration()
             .WriteTo
@@ -93,9 +97,6 @@ public static class ConfigureApplication
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(options =>
         {
-            options
-                .SwaggerDoc("Client",new OpenApiInfo(){Title = AppDomain.CurrentDomain.FriendlyName});
-            
             options
                 .AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
@@ -164,10 +165,11 @@ public static class ConfigureApplication
 
         app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
-        await app.SynchronizePermissions();
+        await app.SynchronizePermissionsAsync();
+        await app.InitSidDataAsync();
     }
 
-    private static async Task SynchronizePermissions(this WebApplication app)
+    private static async Task SynchronizePermissionsAsync(this WebApplication app)
     {
         try
         {
@@ -212,6 +214,122 @@ public static class ConfigureApplication
         catch (Exception e)
         {
             Log.Error(e, "Permissions synchronization crashed.");
+        }
+    }
+    private static async Task InitSidDataAsync(this WebApplication app)
+    {
+        try
+        {
+            Log.Information("Init sid data starting....");
+            using var scope = app.Services.CreateScope();
+            await using var dataContext = scope.ServiceProvider.GetService<ProgramDataContext>();
+
+            ArgumentNullException.ThrowIfNull(dataContext);
+
+            var permissionCodes = typeof(UserPermissions).GetEnumValues().Cast<object>();
+
+            var enumerable = permissionCodes as object[] ?? permissionCodes.ToArray();
+            var structureDefault = await dataContext.Structures
+                .Where(s => !s.IsDelete)
+                .FirstOrDefaultAsync(s => s.IsDefault);
+            
+            if (structureDefault is null)
+            {
+                var structureEntity = await dataContext.Structures.AddAsync(new Structure()
+                {
+                    IsDefault = true,
+                    Name = "Default"
+                });
+
+                await dataContext.SaveChangesAsync();
+
+                structureDefault = structureEntity.Entity;
+            }
+            var structureSuperAdmin = await dataContext.Structures
+                .Where(s => !s.IsDelete)
+                .FirstOrDefaultAsync(s => s.Id == -1);
+            
+            if (structureSuperAdmin is null)
+            {
+                var structureSuperAdminEntity = await dataContext.Structures.AddAsync(new Structure()
+                {
+                    Id = -1,
+                    IsDefault = false,
+                    Name = "Super Admin"
+                });
+
+                await dataContext.SaveChangesAsync();
+
+                structureSuperAdmin = structureSuperAdminEntity.Entity;
+            }
+            foreach (var permissionCode in enumerable)
+            {
+                var storedCode = await dataContext.Permissions
+                    .Where(p => !p.IsDelete)
+                    .FirstOrDefaultAsync(x => x.Code == (int)permissionCode);
+                if(storedCode is null) continue;
+                
+                if ((permissionCode.ToString() ?? string.Empty).StartsWith("Default"))
+                {
+                    var structurePermissionDefault = await dataContext.StructurePermissions
+                        .Where(sp => !sp.IsDelete)
+                        .Where(sp => sp.PermissionId == storedCode.Id)
+                        .FirstOrDefaultAsync(ap => ap.StructureId == structureDefault.Id);
+                    
+                    if(structurePermissionDefault is null)
+                        await dataContext.StructurePermissions.AddAsync(new StructurePermission()
+                        {
+                            StructureId = structureDefault.Id,
+                            Structure = structureDefault,
+                            Permission = storedCode,
+                            PermissionId = storedCode.Id,
+                        });
+                }
+                
+                var structurePermissionAdmin = await dataContext.StructurePermissions
+                    .Where(sp => !sp.IsDelete)
+                    .Where(sp => sp.PermissionId == storedCode.Id)
+                    .FirstOrDefaultAsync(sp => sp.StructureId == structureSuperAdmin.Id);
+                
+                if(structurePermissionAdmin is null)
+                    await dataContext.StructurePermissions.AddAsync(new StructurePermission()
+                    {
+                        StructureId = structureSuperAdmin.Id,
+                        Structure = structureSuperAdmin,
+                        Permission = storedCode,
+                        PermissionId = storedCode.Id,
+                    });
+            }
+
+            var admin = await dataContext.Users
+                .Where(u => !u.IsDelete)
+                .FirstOrDefaultAsync(u => u.Id == -1);
+            
+            if(admin is null)
+                await dataContext.Users.AddAsync(new User()
+                {
+                    Id = -1,
+                    FirstName = "Zuhriddin",
+                    LastName = "Zayniddinov",
+                    Structure = structureSuperAdmin,
+                    SignMethods = new []
+                    {
+                        new PasswordSignMethod()
+                        {
+                            Type = SignMethods.Password,
+                            PhoneNumber = "+998936675925",
+                            PasswordHash = PasswordHelper.Encrypt("12345678")
+                        }
+                    },
+                });
+
+            await dataContext.SaveChangesAsync();
+
+            Log.Information("Init sid data finished successfully.");
+        }
+        catch (Exception e)
+        {
+            Log.Error(e, "Init sid data crashed.");
         }
     }
     public static IServiceCollection AddCronJob<T>(this IServiceCollection services, string cronExpression)

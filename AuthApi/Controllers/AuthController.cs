@@ -8,18 +8,12 @@ namespace AuthApi.Controllers;
 public class AuthController(IAuthService authService) : ApiControllerBase
 {
     [HttpPost]
-    public async Task<ResponseModel> Sign(
-        [FromBody] AuthenticationDto authenticationDto)
-    {
-        return ResponseModel
-            .ResultFromContent(
-                await authService.SignByPassword(authenticationDto));
-    }
+    public async Task<ResponseModel> Sign([FromBody] AuthenticationDto authenticationDto)
+        => ResponseModel.ResultFromContent(await authService.SignByPasswordAsync(authenticationDto));
 
     [HttpPost]
-    public async Task<ResponseModel> Register(
-        [FromBody] UserRegisterDto userRegisterDto)
-        => ResponseModel.ResultFromContent(await authService.Register(userRegisterDto));
+    public async Task<ResponseModel> Register([FromBody] UserRegisterDto userRegisterDto)
+        => ResponseModel.ResultFromContent(await authService.RegisterAsync(userRegisterDto));
     
     [HttpPost]
     public async Task<ResponseModel> RefreshToken([FromBody]TokenDto tokenDto)

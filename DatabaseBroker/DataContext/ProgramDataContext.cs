@@ -85,7 +85,7 @@ public class ProgramDataContext : DbContext
         modelBuilder
             .Entity<SignMethod>()
             .HasDiscriminator(x => x.Type)
-            .HasValue<DefaultSignMethod>(SignMethods.Normal);
+            .HasValue<PasswordSignMethod>(SignMethods.Password);
     }
 
     public DbSet<Permission> Permissions { get; set; }

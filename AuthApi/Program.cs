@@ -2,7 +2,6 @@ using AuthApi.Extensions;
 using WebCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://*:1001");
 builder.ConfigureDefault();
 builder.Services.AddConfig(builder.Configuration);
 // Add services to the container.

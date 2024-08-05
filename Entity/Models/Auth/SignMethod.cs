@@ -14,7 +14,7 @@ public abstract class SignMethod : ModelBase<long>
 
     [NotMapped,JsonIgnore] public virtual User User { get; set; }
 }
-public class DefaultSignMethod : SignMethod
+public class PasswordSignMethod : SignMethod
 {
     [Column("phone_number")] public string? PhoneNumber { get; set; }
 

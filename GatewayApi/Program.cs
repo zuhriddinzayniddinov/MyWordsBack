@@ -3,7 +3,6 @@ using Ocelot.Middleware;
 using WebCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.ConfigureDefault();
 
 builder
     .Services
@@ -21,7 +20,7 @@ builder
 
 builder.Services.AddOcelot(builder.Configuration);
 
-builder.WebHost.UseUrls("http://*:2000");
+builder.WebHost.UseUrls("http://*:3000");
 var app = builder.Build();
 
 app.UseHttpsRedirection();
