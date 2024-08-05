@@ -1,0 +1,15 @@
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\bin\Debug\net8.0\ApiBroker.exe
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\bin\Debug\net8.0\ApiBroker.deps.json
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\bin\Debug\net8.0\ApiBroker.runtimeconfig.json
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\bin\Debug\net8.0\ApiBroker.dll
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\bin\Debug\net8.0\ApiBroker.pdb
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.AssemblyInfoInputs.cache
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.AssemblyInfo.cs
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.csproj.CoreCompileInputs.cache
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.sourcelink.json
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.dll
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\refint\ApiBroker.dll
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.pdb
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ApiBroker.genruntimeconfig.cache
+C:\Users\z_zayniddinov\RiderProjects\MyWordsBack\ApiBroker\obj\Debug\net8.0\ref\ApiBroker.dll
