@@ -1,5 +1,5 @@
 namespace Entity.DataTransferObjects.Authentication;
 
 public record AuthenticationDto(
-    string username,
+    string phoneNumber,
     string password);
