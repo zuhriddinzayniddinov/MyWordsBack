@@ -1,39 +1,46 @@
 {
   "format": 1,
   "restore": {
-    "/home/ami/RiderProjects/MyWordsBack/AuthApi/AuthApi.csproj": {}
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthApi\\AuthApi.csproj": {}
   },
   "projects": {
-    "/home/ami/RiderProjects/MyWordsBack/AuthApi/AuthApi.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthApi\\AuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/AuthApi/AuthApi.csproj",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthApi\\AuthApi.csproj",
         "projectName": "AuthApi",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthApi/AuthApi.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/AuthApi/obj/",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthApi\\AuthApi.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/AuthService/AuthService.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthService/AuthService.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\AuthService.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\AuthService.csproj"
               },
-              "/home/ami/RiderProjects/MyWordsBack/StructureService/RoleService.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/StructureService/RoleService.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\RoleService.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\RoleService.csproj"
               },
-              "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\WebCore.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\WebCore.csproj"
               }
             }
           }
@@ -82,100 +89,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/ami/RiderProjects/MyWordsBack/AuthService/AuthService.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/AuthService/AuthService.csproj",
-        "projectName": "AuthService",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthService/AuthService.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/AuthService/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj"
-              },
-              "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj",
         "projectName": "AuthenticationBroker",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/obj/",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj"
               }
             }
           }
@@ -215,34 +163,114 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\AuthService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj",
-        "projectName": "DatabaseBroker",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/obj/",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\AuthService.csproj",
+        "projectName": "AuthService",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\AuthService.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj"
+              },
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj",
+        "projectName": "DatabaseBroker",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj"
               }
             }
           }
@@ -292,26 +320,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/Entity/obj/",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -363,37 +398,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/ami/RiderProjects/MyWordsBack/StructureService/RoleService.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\RoleService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/StructureService/RoleService.csproj",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\RoleService.csproj",
         "projectName": "RoleService",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/StructureService/RoleService.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/StructureService/obj/",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\RoleService.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\StructureService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj"
               },
-              "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj"
               }
             }
           }
@@ -423,40 +465,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj": {
+    "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\WebCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj",
+        "projectUniqueName": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\WebCore.csproj",
         "projectName": "WebCore",
-        "projectPath": "/home/ami/RiderProjects/MyWordsBack/WebCore/WebCore.csproj",
-        "packagesPath": "/home/ami/.nuget/packages/",
-        "outputPath": "/home/ami/RiderProjects/MyWordsBack/WebCore/obj/",
+        "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\WebCore.csproj",
+        "packagesPath": "C:\\Users\\z_zayniddinov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\WebCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ami/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\z_zayniddinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/AuthenticationBroker/AuthenticationBroker.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\AuthenticationBroker\\AuthenticationBroker.csproj"
               },
-              "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/DatabaseBroker/DatabaseBroker.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\DatabaseBroker\\DatabaseBroker.csproj"
               },
-              "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj": {
-                "projectPath": "/home/ami/RiderProjects/MyWordsBack/Entity/Entity.csproj"
+              "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\z_zayniddinov\\RiderProjects\\MyWordsBack\\Entity\\Entity.csproj"
               }
             }
           }
@@ -535,7 +584,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

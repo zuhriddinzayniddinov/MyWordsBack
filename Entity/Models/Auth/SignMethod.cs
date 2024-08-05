@@ -16,7 +16,7 @@ public abstract class SignMethod : ModelBase<long>
 }
 public class DefaultSignMethod : SignMethod
 {
-    [Column("username")] public string Username { get; set; }
+    [Column("phone_number")] public string? PhoneNumber { get; set; }
 
     [Column("password_hash")] public string PasswordHash { get; set; }
 }
