@@ -9,9 +9,9 @@ builder
     .AddCors(options =>
     {
         options
-            .AddDefaultPolicy(builder =>
+            .AddDefaultPolicy(policyBuilder =>
             {
-                builder
+                policyBuilder
                     .AllowAnyOrigin()
                     .AllowAnyHeader()
                     .AllowAnyMethod();
