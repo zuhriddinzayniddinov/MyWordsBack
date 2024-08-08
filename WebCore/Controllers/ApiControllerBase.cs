@@ -8,13 +8,13 @@ namespace WebCore.Controllers;
 [ApiController]
 public abstract class ApiControllerBase : ControllerBase
 {
-    public virtual long UserId
+    protected long UserId
     {
         get
         {
-            var rawUserId = this.User.FindFirstValue(CustomClaimNames.UserId);
-            return long.TryParse(rawUserId, out var userId) ? userId : default(long);
+            var rawUserId = User.FindFirstValue(CustomClaimNames.UserId);
+            return long.TryParse(rawUserId, out var userId) ? userId : default;
         }
     }
-    public virtual string Language => Request.Headers["language"].FirstOrDefault() ?? "uz";
+    public string Language => Request.Headers["language"].FirstOrDefault() ?? "uz";
 }

@@ -33,12 +33,29 @@ public class ApiSink : ILogEventSink
         var message = logEvent.RenderMessage();
 
         if (logEvent.Exception != null)
-            message += $"\n\nException:\n{logEvent.Exception.GetType().FullName}: {logEvent.Exception.Message}\n{logEvent.Exception.StackTrace}";
+        {
+            message += $"\n\nException: {logEvent.Exception?.GetType().FullName};";
+            message += $"\n\nMessage: {logEvent?.Exception?.Message};";
+            try
+            {
+                var arr = logEvent.Exception?.StackTrace?.Split("  at ")
+                    .Where(t =>
+                        !t.StartsWith("Microsoft") &&
+                        !t.StartsWith("System")).ToArray();
+                
+                message += $"\n\n```StackTrace\n{arr?[1]}\n```";
+                message += $"\n\n```StackTrace\n{arr?[2]}\n```";
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message,e);
+            }
+        }
+
+        var url = $"{_botCredential.Domain}/bot{_botCredential.Token}/sendMessage?" +
+                  $"chat_id={_botCredential.ChatId}&text={message}&parse_mode=Markdown";
 
         using var client = new HttpClient();
-        var response = client.GetAsync($"{_botCredential.Domain}/bot{_botCredential.Token}/sendMessage?chat_id={_botCredential.ChatId}&text={message}").Result;
-
-        if (!response.IsSuccessStatusCode)
-            throw new Exception($"Log ma'lumotlari jo'natilishda xatolik yuz berdi: {response.StatusCode}");
+        var response = client.GetAsync(url).Result;
     }
 }
