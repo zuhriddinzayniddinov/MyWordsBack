@@ -45,6 +45,6 @@ jobs:
         script: |
           cd ${{ vars.WORK_DIR }}
           git pull origin master
-          docker -f docker-compose.yml down
-          docker -f docker-compose.yml pull
-          docker -f docker-compose.yml up -d
+          docker compose down
+          docker compose pull
+          docker compose up -d
