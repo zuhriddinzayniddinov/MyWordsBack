@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DatabaseBroker.Migrations
 {
     [DbContext(typeof(ProgramDataContext))]
-    [Migration("20240805064439_Initial")]
+    [Migration("20240816040519_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -135,6 +135,10 @@ namespace DatabaseBroker.Migrations
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("lastname");
+
+                    b.Property<int>("NativeLanguage")
+                        .HasColumnType("integer")
+                        .HasColumnName("native_language");
 
                     b.Property<long?>("StructureId")
                         .HasColumnType("bigint")

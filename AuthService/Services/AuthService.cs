@@ -5,10 +5,8 @@ using Entity.DataTransferObjects.Authentication;
 using Entity.Enum;
 using Entity.Exeptions;
 using Entity.Extensions;
-using Entity.Models;
 using Entity.Models.Auth;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace AuthService.Services;
 
@@ -31,6 +29,7 @@ public class AuthService(
         {
             FirstName = userRegisterDto.firstName,
             LastName = userRegisterDto.lastName,
+            NativeLanguage = userRegisterDto.nativeLanguage,
             SignMethods = new List<SignMethod>(),
             StructureId = (await structureRepository.FirstOrDefaultAsync(x => x.IsDefault))?.Id,
         };

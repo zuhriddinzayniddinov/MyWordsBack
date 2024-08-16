@@ -5,7 +5,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.ConfigureDefault();
 builder.Services.AddConfig(builder.Configuration);
 // Add services to the container.
-
+builder.Services.AddAuthentication()
+    .AddCookie()
+    .AddGoogle(options =>
+    {
+        options.ClientId = "";
+        options.ClientSecret = "";
+    });
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddService();
 

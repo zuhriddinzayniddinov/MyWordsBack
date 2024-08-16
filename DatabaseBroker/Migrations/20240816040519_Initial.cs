@@ -138,6 +138,7 @@ namespace DatabaseBroker.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     firstname = table.Column<string>(type: "text", nullable: false),
                     lastname = table.Column<string>(type: "text", nullable: false),
+                    native_language = table.Column<int>(type: "integer", nullable: false),
                     structure_id = table.Column<long>(type: "bigint", nullable: true),
                     is_delete = table.Column<bool>(type: "boolean", nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),

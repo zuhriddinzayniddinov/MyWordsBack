@@ -118,7 +118,7 @@ public static class ConfigureApplication
                                 Id = "Bearer"
                             }
                         },
-                        new List<string>() { }
+                        new List<string>()
                     }
                 });
         });

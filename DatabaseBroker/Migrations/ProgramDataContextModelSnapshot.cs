@@ -133,6 +133,10 @@ namespace DatabaseBroker.Migrations
                         .HasColumnType("text")
                         .HasColumnName("lastname");
 
+                    b.Property<int>("NativeLanguage")
+                        .HasColumnType("integer")
+                        .HasColumnName("native_language");
+
                     b.Property<long?>("StructureId")
                         .HasColumnType("bigint")
                         .HasColumnName("structure_id");
