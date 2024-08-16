@@ -33,7 +33,7 @@ services:
       context: .
       dockerfile: AuthApi/Dockerfile
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Staging
 
     restart: always
     ports:
