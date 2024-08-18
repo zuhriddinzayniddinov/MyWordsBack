@@ -60,5 +60,5 @@ services:
 ##      - "3002:3002"
 
 networks:
-  MyWords_Net:
-    driver: bridge
+  happybirthday2you_default:
+    external: true
