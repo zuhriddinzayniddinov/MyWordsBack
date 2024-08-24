@@ -3,7 +3,6 @@ using Template.Extensions;
 using WebCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls("http://*:1003");
 builder.ConfigureDefault();
 // Add services to the container.
 builder.Services.AddService();
