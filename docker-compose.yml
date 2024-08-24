@@ -13,7 +13,7 @@ services:
     
     build:
       context: .
-      dockerfile: GatewayApi/Dockerfile
+      dockerfile: TemplateApi/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
     restart: always
