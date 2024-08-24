@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiBroker", "ApiBroker\ApiB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsService", "WordsService\WordsService.csproj", "{52E22EB4-D21C-495E-A4FA-1878F19E6EAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApi", "TemplateApi\TemplateApi.csproj", "{55FAD586-6E76-412F-A924-AAC4CAF4FABE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{52E22EB4-D21C-495E-A4FA-1878F19E6EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E22EB4-D21C-495E-A4FA-1878F19E6EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E22EB4-D21C-495E-A4FA-1878F19E6EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FAD586-6E76-412F-A924-AAC4CAF4FABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FAD586-6E76-412F-A924-AAC4CAF4FABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FAD586-6E76-412F-A924-AAC4CAF4FABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FAD586-6E76-412F-A924-AAC4CAF4FABE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{E4053C11-68F7-49AB-98D4-FD22171EC579} = {026002AA-727F-4B37-88A9-B1D22262B5BD}
 		{F03CF14D-BC2D-425C-98AC-00AC5E1D0875} = {CA2C7A00-8ADB-4CED-984E-D08046D61DA1}
 		{52E22EB4-D21C-495E-A4FA-1878F19E6EAE} = {026002AA-727F-4B37-88A9-B1D22262B5BD}
+		{55FAD586-6E76-412F-A924-AAC4CAF4FABE} = {C797BED8-696F-45AC-8B97-B157AC79F375}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0A13641-9D7A-40CC-B5F6-EDA9F6EC62B2}

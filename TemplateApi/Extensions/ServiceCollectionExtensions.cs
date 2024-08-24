@@ -1,11 +1,11 @@
-using AuthApi.CronJobs;
 using AuthenticationBroker.TokenHandler;
 using AuthService.Services;
 using DatabaseBroker.Repositories.Auth;
+using DatabaseBroker.Repositories.StaticFiles;
 using RoleService.Service;
-using WebCore.Extensions;
+using StaticFileService.Service;
 
-namespace AuthApi.Extensions;
+namespace Template.Extensions;
 
 public static class ServiceCollectionExtensions
 {
@@ -16,7 +16,7 @@ public static class ServiceCollectionExtensions
     }
     public static IServiceCollection AddService(this IServiceCollection services)
     {
-        //services.AddCronJob<TemplateCroneJob>("* * * * *");
+        services.AddScoped<IStaticFileService, StaticFileService.Service.StaticFileService>();
         services.AddScoped<IAuthService, AuthService.Services.AuthService>();
         services.AddScoped<IRoleService, RoleService.Service.RoleService>();
 
@@ -32,7 +32,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<ITokenRepository, TokenRepository>();
         services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
         services.AddScoped<ISignMethodsRepository, SignMethodsRepository>();
-
+        services.AddScoped<IStaticFileRepository, StaticFileRepository>();
 
         return services;
     }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebCore.Controllers;
 
-[Route("api/[controller]/[action]")]
+//[Route("api/[controller]/[action]")]
 [ApiController]
 public abstract class ApiControllerBase : ControllerBase
 {
