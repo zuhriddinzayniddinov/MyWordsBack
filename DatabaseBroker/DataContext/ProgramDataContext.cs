@@ -2,6 +2,7 @@ using Entity.Enum;
 using Entity.Models;
 using Entity.Models.Auth;
 using Entity.Models.StaticFiles;
+using Entity.Models.Words;
 using Entitys.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -95,4 +96,7 @@ public class ProgramDataContext : DbContext
     public DbSet<TokenModel> Tokens { get; set; }
     public DbSet<SignMethod> UserSignMethods { get; set; }
     public DbSet<StaticFile> StaticFiles { get; set; }
+    public DbSet<Language> Languages { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Word> Words { get; set; }
 }

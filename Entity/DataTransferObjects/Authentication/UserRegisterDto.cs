@@ -1,10 +1,8 @@
-using Entity.Enum;
-
 namespace Entity.DataTransferObjects.Authentication;
 
 public record UserRegisterDto(
     string firstName,
     string lastName,
-    Language nativeLanguage,
+    long nativeLanguageId,
     string phoneNumber,
     string password);

@@ -29,7 +29,7 @@ public class AuthService(
         {
             FirstName = userRegisterDto.firstName,
             LastName = userRegisterDto.lastName,
-            NativeLanguage = userRegisterDto.nativeLanguage,
+            NativeLanguageId = userRegisterDto.nativeLanguageId,
             SignMethods = new List<SignMethod>(),
             StructureId = (await structureRepository.FirstOrDefaultAsync(x => x.IsDefault))?.Id,
         };

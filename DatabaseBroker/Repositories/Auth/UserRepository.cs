@@ -4,9 +4,4 @@ using Entity.Models.Auth;
 
 namespace DatabaseBroker.Repositories.Auth;
 
-public class UserRepository : RepositoryBase<User, long>, IUserRepository
-{
-    public UserRepository(ProgramDataContext dbContext) : base(dbContext)
-    {
-    }
-}
+public class UserRepository(ProgramDataContext dbContext) : RepositoryBase<User, long>(dbContext), IUserRepository;

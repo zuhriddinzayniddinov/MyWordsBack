@@ -4,9 +4,5 @@ using Entity.Models.Auth;
 
 namespace DatabaseBroker.Repositories.Auth;
 
-public class TokenRepository : RepositoryBase<TokenModel, long>, ITokenRepository
-{
-    public TokenRepository(ProgramDataContext dbContext) : base(dbContext)
-    {
-    }
-}
+public class TokenRepository(ProgramDataContext dbContext)
+    : RepositoryBase<TokenModel, long>(dbContext), ITokenRepository;
