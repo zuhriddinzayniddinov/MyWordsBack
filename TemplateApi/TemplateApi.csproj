@@ -18,6 +18,7 @@
       <ProjectReference Include="..\StaticFileService\StaticFileService.csproj" />
       <ProjectReference Include="..\StructureService\RoleService.csproj" />
       <ProjectReference Include="..\WebCore\WebCore.csproj" />
+      <ProjectReference Include="..\WordsService\WordsService.csproj" />
     </ItemGroup>
 
     <ItemGroup>

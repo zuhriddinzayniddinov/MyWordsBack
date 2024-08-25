@@ -8,7 +8,7 @@ using WebCore.Attributes;
 using WebCore.Controllers;
 using WebCore.Models;
 
-namespace Template.Controllers.Auth;
+namespace TemplateApi.Controllers.Auth;
 [Route("api-auth/[controller]/[action]")]
 public class RoleController(IRoleService structureService) : ApiControllerBase
 {

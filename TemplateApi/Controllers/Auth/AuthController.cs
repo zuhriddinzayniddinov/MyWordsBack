@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebCore.Controllers;
 using WebCore.Models;
 
-namespace Template.Controllers.Auth;
+namespace TemplateApi.Controllers.Auth;
 [Route("api-auth/[controller]/[action]")]
 public class AuthController(IAuthService authService) : ApiControllerBase
 {

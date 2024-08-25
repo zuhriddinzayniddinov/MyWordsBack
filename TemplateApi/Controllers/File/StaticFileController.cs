@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using StaticFileService.Service;
 using WebCore.Models;
 
-namespace Template.Controllers.File;
+namespace TemplateApi.Controllers.File;
 [Route("api-fm/[controller]/[action]")]
 [RequestFormLimits(MultipartBodyLengthLimit = (long)1024 * 1024 * 1024 * 1024)]
 public class StaticFileController(IStaticFileService staticFileService) : ControllerBase

@@ -1,5 +1,5 @@
 using Microsoft.Net.Http.Headers;
-using Template.Extensions;
+using TemplateApi.Extensions;
 using WebCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);

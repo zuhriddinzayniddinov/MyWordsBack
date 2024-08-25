@@ -1,6 +1,6 @@
-﻿using Entity.Models.Words;
-using Microsoft.EntityFrameworkCore;
+﻿using DatabaseBroker.DataContext;
+using Entity.Models.Words;
 
 namespace DatabaseBroker.Repositories.Words;
 
-public class LanguageRepository(DbContext dbContext) : RepositoryBase<Language, long>(dbContext), ILanguageRepository;
+public class LanguageRepository(ProgramDataContext dbContext) : RepositoryBase<Language, long>(dbContext), ILanguageRepository;
